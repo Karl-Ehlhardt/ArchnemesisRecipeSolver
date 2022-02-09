@@ -54,25 +54,35 @@ namespace TestingFrontend
             // Create a Bitmap object from Comparison file, one row of pixels.
             Bitmap compareBitmap = new Bitmap("C:\\Users\\steve\\source\\repos\\ArchnemesisRecipeSolver\\TestingFrontend\\TestImages\\Sharkari.png");
 
+            Dictionary<string, List<Color>> allList = new Dictionary<string, List<Color>>();
             List<Color> compagreCol = new List<Color>();
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 10; i++)
             {
                 compagreCol.Add(compareBitmap.GetPixel(i, 0));
             }
+            allList.Add("shar", compagreCol);
+
+            List<Color> hasstecompagreCol = new List<Color>();
+            for (int i = 0; i < 10; i++)
+            {
+                hasstecompagreCol.Add(compareBitmap.GetPixel(i, 2));
+            }
+            allList.Add("hasted", hasstecompagreCol);
 
             // Create a Bitmap object from Screenshot.
             Bitmap ScreenShotBitmap = new Bitmap("C:\\Users\\steve\\source\\repos\\ArchnemesisRecipeSolver\\TestingFrontend\\TestImages\\screenshot-0002.png");
 
             List<Color> ScreenShotBitmapCol = new List<Color>();
-            for (int y = 0; y < 1000; y++)
+            //Look for box and start froms there?
+            for (int y = 0; y < ScreenShotBitmap.Height; y++)
             {
+                            Console.WriteLine(y);
                 try
                 {
-                    for (int x = 0; x < 1000; x++)
+                    for (int x = 0; x < ScreenShotBitmap.Width; x++)
                     {
                         try
                         {
-
                             ScreenShotBitmapCol.Add(ScreenShotBitmap.GetPixel(x, y));
                         }
                         catch
@@ -89,49 +99,77 @@ namespace TestingFrontend
                 }
             }
 
+
             int rowMatchesInput = 0;
             int inARow = 0;
             int nonMatch = 0;
             bool sequencial = false;
-            foreach (Color SSco in ScreenShotBitmapCol)
+            Dictionary<string, int> final = new Dictionary<string, int>();
+
+            foreach (string key in allList.Keys)
             {
-                foreach (Color co in compagreCol)
+                foreach (Color SSco in ScreenShotBitmapCol)
                 {
-                    if (SSco != co)
+                    foreach (Color co in allList[key])
                     {
-                        nonMatch += 1;
+                        if (SSco == compagreCol[inARow])
+                        {
+                            sequencial = true;
+                            inARow += 1;
+                            break;
+                        }
+                        else
+                        {
+                            sequencial = false;
+                            inARow += 0;
+                            break;
+                        }
+                    }
+                    if (sequencial)
+                    {
+                        if (inARow == compagreCol.Count())
+                        {
+                            rowMatchesInput += 1;
+                            inARow = 0;
+
+                        }
                     }
                 }
 
-                if (nonMatch < compagreCol.Count())
-                {
-                    inARow += 1;
-                    nonMatch = 0;
-                    sequencial = true;
-                }
-                else
-                {
-                    sequencial = false;
-                    nonMatch = 0;
-                }
-                if (sequencial)
-                {
-                    if (inARow == compagreCol.Count())
-                    {
-                        rowMatchesInput += 1;
-                        inARow = 0;
-
-                    }
-                }
-                else if(!sequencial)
-                {
-                    inARow = 0;
-                }
-
+                final.Add(key, rowMatchesInput);
+                rowMatchesInput = 0;
             }
 
+            //if (nonMatch < compagreCol.Count())
+            //{
+            //    inARow += 1;
+            //    nonMatch = 0;
+            //    sequencial = true;
+            //}
+            //else
+            //{
+            //    sequencial = false;
+            //    nonMatch = 0;
+            //}
+            //if (sequencial)
+            //{
+            //    if (inARow == compagreCol.Count())
+            //    {
+            //        rowMatchesInput += 1;
+            //        inARow = 0;
+
+            //    }
+            //}
+            //else if(!sequencial)
+            //{
+            //    inARow = 0;
+            //}
 
             Console.WriteLine("Hello World!");
         }
+
+
     }
 }
+
+
