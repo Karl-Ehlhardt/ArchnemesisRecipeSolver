@@ -112,7 +112,7 @@ namespace TestingFrontend
                 {
                     foreach (Color co in allList[key])
                     {
-                        if (SSco == compagreCol[inARow])
+                        if (SSco == allList[key][inARow])
                         {
                             sequencial = true;
                             inARow += 1;
@@ -127,7 +127,7 @@ namespace TestingFrontend
                     }
                     if (sequencial)
                     {
-                        if (inARow == compagreCol.Count())
+                        if (inARow == allList[key].Count())
                         {
                             rowMatchesInput += 1;
                             inARow = 0;
