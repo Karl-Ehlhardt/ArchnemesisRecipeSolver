@@ -51,32 +51,30 @@ namespace TestingFrontend
             //    }
             //}
 
+            //TimeSpan ts = LocalDataStoreSlot
             // Create a Bitmap object from Comparison file, one row of pixels.
-            Bitmap compareBitmap = new Bitmap("C:\\Users\\steve\\source\\repos\\ArchnemesisRecipeSolver\\TestingFrontend\\TestImages\\Sharkari.png");
-
             Dictionary<string, List<Color>> allList = new Dictionary<string, List<Color>>();
-            List<Color> compagreCol = new List<Color>();
-            for (int i = 0; i < 10; i++)
+            string[] allFiles = Directory.GetFiles("C:\\Users\\steve\\source\\repos\\ArchnemesisRecipeSolver\\TestingFrontend\\TestImages\\Fixed");
+            foreach (string fName in allFiles)
             {
-                compagreCol.Add(compareBitmap.GetPixel(i, 0));
-            }
-            allList.Add("shar", compagreCol);
+                string [] splitAbsPath= fName.Split("\\");
 
-            List<Color> hasstecompagreCol = new List<Color>();
-            for (int i = 0; i < 10; i++)
-            {
-                hasstecompagreCol.Add(compareBitmap.GetPixel(i, 2));
+                Bitmap compareBitmap = new Bitmap(fName);
+                List<Color> compareCol = new List<Color>();
+                for (int i = 0; i < 10; i++)
+                {
+                    compareCol.Add(compareBitmap.GetPixel(i, 2));
+                }
+                allList.Add(splitAbsPath.Last(), compareCol);
             }
-            allList.Add("hasted", hasstecompagreCol);
 
             // Create a Bitmap object from Screenshot.
-            Bitmap ScreenShotBitmap = new Bitmap("C:\\Users\\steve\\source\\repos\\ArchnemesisRecipeSolver\\TestingFrontend\\TestImages\\screenshot-0002.png");
+            Bitmap ScreenShotBitmap = new Bitmap("C:\\Users\\steve\\source\\repos\\ArchnemesisRecipeSolver\\TestingFrontend\\TestImages\\Screenshots\\screenshot-0004.png");
 
             List<Color> ScreenShotBitmapCol = new List<Color>();
             //Look for box and start froms there?
             for (int y = 0; y < ScreenShotBitmap.Height; y++)
             {
-                            Console.WriteLine(y);
                 try
                 {
                     for (int x = 0; x < ScreenShotBitmap.Width; x++)
@@ -102,7 +100,7 @@ namespace TestingFrontend
 
             int rowMatchesInput = 0;
             int inARow = 0;
-            int nonMatch = 0;
+            int Match = 0;
             bool sequencial = false;
             Dictionary<string, int> final = new Dictionary<string, int>();
 
@@ -124,6 +122,7 @@ namespace TestingFrontend
                             inARow += 0;
                             break;
                         }
+                        
                     }
                     if (sequencial)
                     {
@@ -139,6 +138,15 @@ namespace TestingFrontend
                 final.Add(key, rowMatchesInput);
                 rowMatchesInput = 0;
             }
+
+            int AllIcons = 0;
+            foreach (string key in final.Keys)
+            {
+                Console.WriteLine($"{key} - {final[key]}");
+                AllIcons += final[key];
+            }
+
+            Console.WriteLine($"Total Icons- {AllIcons}");
 
             //if (nonMatch < compagreCol.Count())
             //{
@@ -165,7 +173,7 @@ namespace TestingFrontend
             //    inARow = 0;
             //}
 
-            Console.WriteLine("Hello World!");
+            Console.ReadLine();
         }
 
 
