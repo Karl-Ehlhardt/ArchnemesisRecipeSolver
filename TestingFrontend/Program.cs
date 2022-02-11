@@ -57,7 +57,7 @@ namespace TestingFrontend
             string[] allFiles = Directory.GetFiles("C:\\Users\\steve\\source\\repos\\ArchnemesisRecipeSolver\\TestingFrontend\\TestImages\\Fixed");
             foreach (string fName in allFiles)
             {
-                string [] splitAbsPath= fName.Split("\\");
+                string[] splitAbsPath = fName.Split("\\");
 
                 Bitmap compareBitmap = new Bitmap(fName);
                 List<Color> compareCol = new List<Color>();
@@ -66,36 +66,23 @@ namespace TestingFrontend
                     compareCol.Add(compareBitmap.GetPixel(i, 2));
                 }
                 allList.Add(splitAbsPath.Last(), compareCol);
+                compareBitmap.Dispose();
             }
 
-            // Create a Bitmap object from Screenshot.
-            Bitmap ScreenShotBitmap = new Bitmap("C:\\Users\\steve\\source\\repos\\ArchnemesisRecipeSolver\\TestingFrontend\\TestImages\\Screenshots\\screenshot-0004.png");
+            // Create a Bitmap object from Screenshot.C:\Users\steve\Documents\My Games\Path of Exile\Screenshots
+            string[] shotFiles = Directory.GetFiles("C:\\Users\\steve\\Documents\\My Games\\Path of Exile\\Screenshots\\");
 
+            Bitmap ScreenShotBitmap = new Bitmap(shotFiles[shotFiles.Count()-1]);
             List<Color> ScreenShotBitmapCol = new List<Color>();
             //Look for box and start froms there?
             for (int y = 0; y < ScreenShotBitmap.Height; y++)
             {
-                try
+                for (int x = 0; x < ScreenShotBitmap.Width; x++)
                 {
-                    for (int x = 0; x < ScreenShotBitmap.Width; x++)
-                    {
-                        try
-                        {
-                            ScreenShotBitmapCol.Add(ScreenShotBitmap.GetPixel(x, y));
-                        }
-                        catch
-                        {
-                            break;
-                        }
-
-                    }
-
-                }
-                catch
-                {
-                    break;
+                    ScreenShotBitmapCol.Add(ScreenShotBitmap.GetPixel(x, y));
                 }
             }
+            ScreenShotBitmap.Dispose();
 
 
             int rowMatchesInput = 0;
@@ -122,7 +109,7 @@ namespace TestingFrontend
                             inARow += 0;
                             break;
                         }
-                        
+
                     }
                     if (sequencial)
                     {
