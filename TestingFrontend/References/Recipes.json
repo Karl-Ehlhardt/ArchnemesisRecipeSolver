@@ -1,0 +1,301 @@
+{
+  "Recipe": [
+    {
+      "Name": "Assassin",
+      "Ingredients": [
+        "Deadeye",
+        "Vampiric"
+      ]
+    },
+    {
+      "Name": "Corrupter",
+      "Ingredients": [
+        "Bloodletter",
+        "Chaosweaver"
+      ]
+    },
+    {
+      "Name": "Entangler",
+      "Ingredients": [
+        "Toxic",
+        "Bloodletter"
+      ]
+    },
+    {
+      "Name": "Evocationist",
+      "Ingredients": [
+        "Flameweaver",
+        "Frostweaver",
+        "Stormweaver"
+      ]
+    },
+    {
+      "Name": "Hexer",
+      "Ingredients": [
+        "Chaosweaver",
+        "Echoist"
+      ]
+    },
+    {
+      "Name": "Treant Horde",
+      "Ingredients": [
+        "Toxic",
+        "Sentinel",
+        "Steel-Infused"
+      ]
+    },
+    {
+      "Name": "Rejunavating",
+      "Ingredients": [
+        "Gargantuan",
+        "Vampiric"
+      ]
+    },
+    {
+      "Name": "Ice Prison",
+      "Ingredients": [
+        "Permafrost",
+        "Sentinel"
+      ]
+    },
+    {
+      "Name": "Storm Strider",
+      "Ingredients": [
+        "Stormweaver",
+        "Hasted"
+      ]
+    },
+    {
+      "Name": "Heralding Minions",
+      "Ingredients": [
+        "Dynamo",
+        "Arcane Buffer",
+        "Steel-Infused"
+      ]
+    },
+    {
+      "Name": "Necromancer",
+      "Ingredients": [
+        "Bombardier",
+        "Overcharged"
+      ]
+    },
+    {
+      "Name": "Flame Strider",
+      "Ingredients": [
+        "Flameweaver",
+        "Hasted"
+      ]
+    },
+    {
+      "Name": "Drought Bringer",
+      "Ingredients": [
+        "Malediction",
+        "Deadeye"
+      ]
+    },
+    {
+      "Name": "Executioner",
+      "Ingredients": [
+        "Frenzied",
+        "Berserker"
+
+      ]
+    },
+    {
+      "Name": "Invulnerable",
+      "Ingredients": [
+        "Sentinel",
+        "Juggernaut",
+        "Consecrator"
+
+      ]
+    },
+    {
+      "Name": "Frost Strider",
+      "Ingredients": [
+        "Hasted",
+        "Frostweaver"
+
+      ]
+    },
+    {
+      "Name": "Magma Barrier",
+      "Ingredients": [
+        "Incendiary",
+        "Bonebreaker"
+
+      ]
+    },
+    {
+      "Name": "Mirror Image",
+      "Ingredients": [
+        "Echoist",
+        "Soul Conduit"
+
+      ]
+    },
+    {
+      "Name": "Mana Siphoner",
+      "Ingredients": [
+        "Dynamo",
+        "Consecrator"
+
+      ]
+    },
+    {
+      "Name": "Effigy",
+      "Ingredients": [
+        "Hexer",
+        "Malediction",
+        "Corrupter"
+
+      ]
+    },
+    {
+      "Name": "Crystal-Skinned",
+      "Ingredients": [
+        "Rejunavating",
+        "Permafrost",
+        "Berserker"
+
+      ]
+    },
+    {
+      "Name": "Temporal Bubble",
+      "Ingredients": [
+        "Hexer",
+        "Juggernaut",
+        "Arcane Buffer"
+
+      ]
+    },
+    {
+      "Name": "Empowered Elements",
+      "Ingredients": [
+        "Evocationist",
+        "Steel-Infused",
+        "Chaosweaver"
+
+      ]
+    },
+    {
+      "Name": "Trickster",
+      "Ingredients": [
+        "Assassin",
+        "Overcharged",
+        "Echoist"
+
+      ]
+    },
+    {
+      "Name": "Brine King-Touched",
+      "Ingredients": [
+        "Ice Prison",
+        "Storm Strider",
+        "Heralding Minions"
+
+      ]
+    },
+    {
+      "Name": "Corpse Detonater",
+      "Ingredients": [
+        "Necromancer",
+        "Incendiary"
+
+      ]
+    },
+    {
+      "Name": "Abberath-Touched",
+      "Ingredients": [
+        "Flame Strider",
+        "Rejuvenating",
+        "Frenzied"
+
+      ]
+    },
+    {
+      "Name": "Tukohama-Touched",
+      "Ingredients": [
+        "Executioner",
+        "Magma Barrier",
+        "Bonebreaker"
+
+      ]
+    },
+    {
+      "Name": "Soul Eater",
+      "Ingredients": [
+        "Necromancer",
+        "Soul Conduit",
+        "Gargantuan"
+
+      ]
+    },
+    {
+      "Name": "Empowering Minions",
+      "Ingredients": [
+        "Necromancer",
+        "Executioner",
+        "Gargantuan"
+
+      ]
+    },
+    {
+      "Name": "Arakali-Touched",
+      "Ingredients": [
+        "Corpse Detonater",
+        "Entangler",
+        "Assassin"
+
+      ]
+    },
+    {
+      "Name": "Kitava-Touched",
+      "Ingredients": [
+        "Abberath-Touched",
+        "Corrupter",
+        "Tukohama-Touched",
+        "Corpse Detonater"
+
+      ]
+    },
+    {
+      "Name": "Shakari-Touched",
+      "Ingredients": [
+        "Soul Eater",
+        "Entangler",
+        "Drought Bringer"
+
+      ]
+    },
+    {
+      "Name": "Lunaris-Touched",
+      "Ingredients": [
+        "Empowering Minions",
+        "Invulnerable",
+        "Frost Strider"
+
+      ]
+    },
+    {
+      "Name": "Solaris-Touched",
+      "Ingredients": [
+        "Empowering Minions",
+        "Invulnerable",
+        "Magma Barrier"
+
+      ]
+    },
+    {
+      "Name": "Innocence-Touched",
+      "Ingredients": [
+        "Lunaris-Touched",
+        "Solaris-Touched",
+        "Mirror Image",
+        "Mana Siphoner"
+
+      ]
+    }
+  ]
+}
