@@ -38,9 +38,9 @@ namespace Data
             Bitmap ScreenShotBitmap = new Bitmap(shotFiles[shotFiles.Count() - 1]);
             List<Color> ScreenShotBitmapCol = new List<Color>();
             //Look for box and start froms there? NEEDS UPDATE FOR OTHER MACHINES
-            for (int y = 424; y < 1200; y++)
+            for (int y = 0; y < ScreenShotBitmap.Height; y++)
             {
-                for (int x = 158; x < 780; x++)
+                for (int x = 0; x < ScreenShotBitmap.Width; x++)
                 {
                     ScreenShotBitmapCol.Add(ScreenShotBitmap.GetPixel(x, y));
                 }
@@ -85,6 +85,7 @@ namespace Data
                 }
 
                 final.Add(key, rowMatchesInput);
+                rowMatchesInput = 0;
             }
             return final;
 

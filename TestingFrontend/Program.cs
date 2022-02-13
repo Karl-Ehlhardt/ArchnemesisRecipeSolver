@@ -21,16 +21,16 @@ namespace TestingFrontend
 
 
 
-            //int AllIcons = 0;
-            //foreach (string key in allIconsInScreenshot.Keys)
-            //{
-            //    Console.WriteLine($"{key} - {allIconsInScreenshot[key]}");
-            //    AllIcons += allIconsInScreenshot[key];
-            //}
+            int AllIcons = 0;
+            foreach (string key in allIconsInScreenshot.Keys)
+            {
+                Console.WriteLine($"{key} - {allIconsInScreenshot[key]}");
+                AllIcons += allIconsInScreenshot[key];
+            }
 
-            //Console.WriteLine($"Total Icons- {AllIcons}");
+            Console.WriteLine($"Total Icons- {AllIcons}");
 
-            //Console.ReadLine();
+            Console.ReadLine();
         }
 
 
